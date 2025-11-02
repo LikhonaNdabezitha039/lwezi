@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Six Months Courses</title>
+    <title>Six Months Courses</title><!--The title of the website page-->
 
     <link rel="stylesheet" href="style/style.css">  
 </head>
 <body>
-    <!-- Header / Nav -->
+    <!--The header-->
     <header class="header">
         <div class="container">
         <div class="logo">
-            <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828a37?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="logo">
+            <img src="./Images/Logo.png" alt="logo">
             <div>
             <div style="font-weight:800; color:#0b5d21;">EMPOWERING<br><span style="font-weight:600; font-size:13px;">THE NATION</span></div>
             </div>
         </div>
-    
+        <!--The navigation bar of the website-->
         <nav class="nav" role="navigation" aria-label="Main Navigation">
             <a class="pill" href="home.html">Home</a>
-            <a class="pill" href="sixMonthsCourses.html">Summary Six-Month Courses</a>
-            <a class="pill" href="sixWeeksCourses.html">Summary Six-Week Courses</a>
+            <div class="dropdown">
+            <span class="pill">Summary ▾</span>
+            <div class="dropdown-menu" aria-hidden="true">
+                <a href="sixWeeksCourses.html">Six Week Courses</a>
+                <a href="sixMonthsCourses.html">Six Month Courses</a>
+            </div>
+            </div>
     
-            <!-- Courses dropdown -->
+            <!--Courses dropdown-->
             <div class="dropdown">
             <span class="pill">Courses ▾</span>
             <div class="dropdown-menu" aria-hidden="true">
@@ -38,36 +43,62 @@
             <a class="pill" href="contact.html">Contact</a>
             <a class="pill" href="enquiry.html">Enquiry</a>
         </nav>
-</div>
+        </div>
     </header>
 
     <main class="content" role="main">
-        <!-- Back button -->
-    <a class="back-link" href="home.html" aria-label="Back to the previous page">
-      <span class="back-icon">◀</span>
-      <span>Back</span>
-    </a>
+        <!--Back button(which navigate to the homepage)-->
+        <a class="back-link" href="home.html" aria-label="Back to the previous page">
+          <span class="back-icon">◀</span>
+          <span>Back</span>
+        </a>
         <h2 style="text-align:center; color:var(--blue); margin-bottom:18px;">SUMMARY OF SIX-MONTH COURSES</h2>
 
-        <div class="course-summary">
-            <h3>1. First Aid</h3>
-            <p>A comprehensive six-month course covering essential first aid skills, emergency response techniques, and CPR training to equip individuals with the knowledge to handle medical emergencies effectively.</p>
-        </div>
+      <section class="content">
+        <p>Explore our six-month professional training programs designed to build practical skills, self-reliance, and employability within local communities.</p>
 
-        <div class="course-summary">
-            <h3>2. Sewing</h3>
-            <p>This six-month sewing course teaches fundamental sewing techniques, pattern making, garment construction, and fabric selection, empowering students to create their own clothing and home textiles.</p>
-        </div>
+        <div class="courses-grid">
+          <!--First aid course-->
+          <div class="course-card">
+            <img src="./Images/firstAid.webp" alt="First Aid Course"><!--The first aid course image--> 
+            <div class="course-info">
+              <h2>First Aid</h2>
+              <p>This course provides essential emergency response training. Participants learn CPR, how to use an AED, treat wounds and fractures, manage choking, and stabilize injuries before professional help arrives. Gain confidence in saving lives in any situation.</p>
+              <a href="firstAid.html" class="learn-more">Learn More</a>
+            </div>
+          </div>
 
-        <div class="course-summary">
-            <h3>3. Landscaping</h3>
-            <p>A practical six-month landscaping course focusing on garden design, plant care, soil management, and sustainable landscaping practices to enhance outdoor spaces.</p>
-        </div>
+          <!--Sewing course-->
+          <div class="course-card">
+            <img src="./Images/sewing.jpg" alt="Sewing Course">
+            <div class="course-info">
+              <h2>Sewing</h2>
+              <p>Learn the fundamentals of both hand and machine sewing. Students gain skills in garment construction, pattern cutting, alterations, hemming, and creative design. This course encourages independence and income generation through clothing repair and tailoring.</p>
+              <a href="sewing.html" class="learn-more">Learn More</a>
+            </div>
+          </div>
 
-        <div class="course-summary">
-            <h3>4. Life Skills</h3>
-            <p>This six-month life skills course covers essential topics such as communication, financial literacy, time management, and personal development to help individuals succeed in various aspects of life.</p>
+          <!--Landscaping course-->
+          <div class="course-card">
+            <img src="./Images/landScaping.jpg" alt="Landscaping Course">
+            <div class="course-info">
+              <h2>Landscaping</h2>
+              <p>Develop expertise in outdoor design and garden management. Learn about plant selection, irrigation systems, soil preparation, and sustainable maintenance. This course empowers students to create beautiful, eco-friendly gardens and functional green spaces.</p>
+              <a href="landScaping.html" class="learn-more">Learn More</a>
+            </div>
+          </div>
+
+          <!--Life Skills course-->
+          <div class="course-card">
+            <img src="./Images/lifeSkills.jpg" alt="Life Skills Course">
+            <div class="course-info">
+              <h2>Life Skills</h2>
+              <p>This course focuses on personal and professional development. Topics include financial literacy, time management, stress control, effective communication, and confidence-building. Graduates are equipped with vital competencies for success in both work and life.</p>
+              <a href="lifeSkills.html" class="learn-more">Learn More</a>
+            </div>
+          </div>
         </div>
+      </section>
     </main>  
 </body>
 

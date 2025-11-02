@@ -10,7 +10,7 @@
     <header class="header">
         <div class="container">
         <div class="logo">
-            <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828a37?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="logo">
+            <img src="./Images/Logo.png" alt="logo">
             <div>
             <div style="font-weight:800; color:#0b5d21;">EMPOWERING<br><span style="font-weight:600; font-size:13px;">THE NATION</span></div>
             </div>
@@ -18,8 +18,13 @@
     
         <nav class="nav" role="navigation" aria-label="Main Navigation">
             <a class="pill" href="home.html">Home</a>
-            <a class="pill" href="sixMonthsCourses.html">Summary Six-Month Courses</a>
-            <a class="pill" href="sixWeeksCourses.html">Summary Six-Week Courses</a>
+            <div class="dropdown">
+            <span class="pill">Summary ▾</span>
+            <div class="dropdown-menu" aria-hidden="true">
+                <a href="sixWeeksCourses.html">Six Week Courses</a>
+                <a href="sixMonthsCourses.html">Six Month Courses</a>
+            </div>
+            </div>
     
             <!-- Courses dropdown -->
             <div class="dropdown">
@@ -49,22 +54,43 @@
     </a>
         <h2 style="text-align:center; color:var(--blue); margin-bottom:18px;">SUMMARY OF SIX-WEEK COURSES</h2>
 
-        <div class="course-summary">
-            <h3>1. Child Minding</h3>
-            <p>A six-week course designed to provide essential skills and knowledge for effective child care, including child development, safety, nutrition, and engaging activities.</p>
-        </div>
-        <div class="course-summary">
-            <h3>2. Cooking</h3>
-            <p>This six-week cooking course covers basic culinary skills, kitchen safety, meal planning, and preparation techniques to help individuals create nutritious and delicious meals.</p>
-        </div>
-        <div class="course-summary">
-            <h3>3. Garden Maintenance</h3>
-            <p>A practical six-week course focused on essential garden maintenance skills, including lawn care, pruning, planting, and pest management to keep gardens healthy and attractive.</p>
-        </div>
+        <section class="content">
+          <p>Our six-week programs are short, hands-on, and designed to provide immediate, practical skills for community employment, home management, and personal growth.</p>
 
+          <div class="courses-grid">
+            <!-- Child Minding -->
+            <div class="course-card">
+              <img src="./Images/childMinding.jpg" alt="Child Minding Course">
+              <div class="course-info">
+                <h2>Child Minding</h2>
+                <p>This course trains learners in professional child care and early childhood development. Participants learn how to ensure children’s safety, plan age-appropriate activities, manage daily routines, and provide emotional and educational support. Ideal for those seeking work as child minders, au pairs, or early years assistants.</p>
+                <a href="childMinding.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+
+            <!-- Cooking -->
+            <div class="course-card">
+              <img src="./Images/cooking.webp" alt="Cooking Course">
+              <div class="course-info">
+                <h2>Cooking</h2>
+                <p>A practical cooking course that builds essential culinary and kitchen management skills. Students learn safe food handling, meal preparation, nutrition basics, menu planning, and presentation. Perfect for home cooks or those starting a catering or hospitality career.</p>
+                <a href="cooking.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+
+            <!-- Garden Maintenance -->
+            <div class="course-card">
+              <img src="./Images/gardenMaintenance.jpg" alt="Garden Maintenance Course">
+              <div class="course-info">
+                <h2>Garden Maintenance</h2>
+                <p>This course focuses on the practical aspects of maintaining gardens and green spaces. Topics include soil care, weeding, pruning, lawn mowing, composting, and basic irrigation. Students gain knowledge to keep outdoor environments healthy and visually appealing, supporting both residential and commercial landscapes.</p>
+                <a href="gardenMaintenance.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
-
-        
+    
 </body>
 <footer class="site-footer">
     <div class="footer-grid">

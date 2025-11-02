@@ -10,44 +10,88 @@
   <header class="header">
     <div class="container">
       <div class="logo">
-        <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828a37?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="logo">
+        <img src="./Images/Logo.png" alt="logo">
         <div>
           <div style="font-weight:800; color:#0b5d21;">EMPOWERING<br><span style="font-weight:600; font-size:13px;">THE NATION</span></div>
         </div>
       </div>
 
       <nav class="nav" role="navigation" aria-label="Main Navigation">
-        <a class="pill" href="home.html">Home</a>
-        <a class="pill" href="sixMonthsCourses.html">Summary Six-Month Courses</a>
-        <a class="pill" href="sixWeeksCourses.html">Summary Six-Week Courses</a>
-
-        <!-- Courses dropdown -->
-        <div class="dropdown">
-          <span class="pill">Courses ▾</span>
-          <div class="dropdown-menu" aria-hidden="true">
-            <a href="firstAid.html">First Aid</a>
-            <a href="sewing.html">Sewing</a>
-            <a href="landScaping.html">Landscaping</a>
-            <a href="lifeSkills.html">Life Skills</a>
-            <a href="childMinding.html">Child Minding</a>
-            <a href="cooking.html">Cooking</a>
-            <a href="gardenMaintenance.html">Garden Maintenance</a>
-          </div>
-        </div>
-        <a class="pill" href="calculatingFees.html">Calculate</a>
-        <a class="pill" href="contact.html">Contact</a>
-        <a class="pill" href="enquiry.html">Enquiry</a>
-      </nav>
+            <a class="pill" href="home.html">Home</a>
+            <div class="dropdown">
+            <span class="pill">Summary ▾</span>
+            <div class="dropdown-menu" aria-hidden="true">
+                <a href="sixWeeksCourses.html">Six Week Courses</a>
+                <a href="sixMonthsCourses.html">Six Month Courses</a>
+            </div>
+            </div>
+    
+            <!-- Courses dropdown -->
+            <div class="dropdown">
+            <span class="pill">Courses ▾</span>
+            <div class="dropdown-menu" aria-hidden="true">
+                <a href="firstAid.html">First Aid</a>
+                <a href="sewing.html">Sewing</a>
+                <a href="landScaping.html">Landscaping</a>
+                <a href="lifeSkills.html">Life Skills</a>
+                <a href="childMinding.html">Child Minding</a>
+                <a href="cooking.html">Cooking</a>
+                <a href="gardenMaintenance.html">Garden Maintenance</a>
+            </div>
+            </div>
+            <a class="pill" href="calculatingFees.html">Calculate</a>
+            <a class="pill" href="contact.html">Contact</a>
+            <a class="pill" href="enquiry.html">Enquiry</a>
+        </nav>
   </header>
 
   <main class="content">
     <!-- Back button -->
-    <a class="back-link" href="sixMonthsCourses.html" aria-label="Back to the previous page">
+    <a class="back-link" href="home.html" aria-label="Back to the previous page">
       <span class="back-icon">◀</span>
       <span>Back</span>
     </a>
 
     <h2 style="text-align:center; color:var(--blue); margin-bottom:18px;">ENQUIRIES</h2>
+    <div class="content">
+        <h1>Become a Sponsor or Contributor</h1>
+        <p>Fill out the form below to enquire about sponsorship or volunteering opportunities with Empowering The Nation Organization.</p>
+        <!--Enquiry form with required fields of the users information.-->
+        <form action="#" method="post" aria-label="Enquiry form"><!--The IIE,2025.-->
+
+          <input type="text" name="fullname" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <input type="text" name="city" placeholder="City / Town" required>
+          <!-- Dropdown for province selection on the eenquiry form.-->
+          <select name="province" required>
+            <option value="">Select Province</option>
+            <option>Gauteng</option>
+            <option>KwaZulu-Natal</option>
+            <option>Western Cape</option>
+            <option>Eastern Cape</option>
+            <option>Mpumalanga</option>
+            <option>Limpopo</option>
+            <option>Free State</option>
+            <option>North West</option>
+            <option>Northern Cape</option>
+          </select><!--The IIE,2025.-->
+
+          <!--Dropdown for interest selection towards the organisation.-->
+          <select name="interest" required><!--The IIE,2025.-->
+            <option value="">I want to...</option>
+            <option>Become a Sponsor</option>
+            <option>Contributor Directory</option>
+            <option>Volunteer at Events</option>
+            <option>Become a Contributor</option>
+          </select>
+          <!--Textarea for message that the user might want share.-->
+          <textarea name="message" rows="5" placeholder="Tell us why you want to join" required></textarea>
+          <!--Submit button.-->
+          <button type="submit">Submit Enquiry</button><!--W3Schools, 2025.-->
+        </form>
+      </div>
+  </main>
 </body>
 <footer class="site-footer">
     <div class="footer-grid">

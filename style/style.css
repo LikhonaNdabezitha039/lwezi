@@ -1,6 +1,6 @@
-/* style.css - global styles for all pages */
+/* style.css - The styles for all pages */
 
-/* Reset-ish */
+/* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root{
@@ -28,7 +28,7 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* Top header / nav */
+/* Top header */
 .header{
   background:var(--mint);
   padding:18px 0;
@@ -43,6 +43,7 @@ body{
   align-items:center;
   gap:20px;
 }
+
 
 /* logo */
 .logo{
@@ -115,10 +116,10 @@ body{
 }
 .dropdown-menu a:hover{ background:#f0f6f3; }
 
-/* show menu on hover (works for desktop) */
+/* menu hover */
 .dropdown:hover .dropdown-menu{ display:block; }
 
-/* Hero banner */
+/* Hero Image on home */
 .hero{
   width:100%;
   max-width:var(--container-width);
@@ -166,7 +167,74 @@ body{
   align-self: start;
 }
 
-/* info cards like rounded boxes in wireframe */
+/* Summ-Six-Month Course Section */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Each course card */
+.course-card {
+  background-color: #00a2ff; /* Bright blue box */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Course image */
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Course info text */
+.course-info {
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.course-info h2 {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.course-info p {
+  font-size: 0.9rem;
+  margin: 10px 0 15px;
+  color: #f1f1f1;
+}
+
+/* Learn More button */
+.learn-more {
+  display: inline-block;
+  background-color: #7fff00; /* Bright green button */
+  color: #000;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover same color as the light blue box */
+.learn-more:hover {
+  background-color: #00a2ff; /* Blue hover same as box */
+  color: #fff;
+}
+
+/* info cards */
 .info-card{
   background: #dff3e8;
   border-radius:28px;
@@ -203,6 +271,8 @@ body{
   margin-bottom:10px;
   font-weight:700;
 }
+
+{/*The apply now button style(named as book-btn)*/}
 .book-btn{
   display:inline-block;
   margin-top:16px;
@@ -235,8 +305,29 @@ body{
   line-height:44px;
   text-align:center;
 }
-
-/* Our Values section (continuation of homepage) */
+/*Our Mission section*/
+.our-mission{
+  text-align:center;
+  padding:40px 22px;
+}
+.our-mission h3{ color:var(--blue); margin-bottom:18px; font-size:20px; }
+.mission{
+  max-width:920px;
+  margin:10px auto 28px auto;
+  color:#333;
+}
+/*Our Vision section*/
+.our-vision{
+  text-align:center;
+  padding:40px 22px;
+} 
+.our-vision h3{ color:var(--green); margin-bottom:18px; font-size:20px; }
+.vision{
+  max-width:920px;
+  margin:10px auto 28px auto;
+  color:#333;
+}
+/* Our Values section */
 .our-values{
   text-align:center;
   padding:40px 22px;
@@ -248,7 +339,7 @@ body{
   color:#333;
 }
 
-/* navy footer - shows on all pages */
+/* navy footer - shows almost on all pages */
 .site-footer{
   background:var(--navy);
   color: #e6eeff;
@@ -271,6 +362,55 @@ body{
   color:rgba(255,255,255,0.6);
   font-size:13px;
 }
+/* Contact page styles */
+/* Big light-green pill box around the entire contact section */
+.contact-wrapper {
+  border: 3px solid green;             /* Green border */
+  background-color: #c8efcb;           /* Light green background */
+  border-radius: 20px;                 
+  padding: 40px;                       /* Space inside */
+  margin-top: 30px;                   
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.15); /* Soft green glow */
+}
+
+
+.branches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+/* Each branch card styled as a light-green pill box */
+.branch {
+  border: 3px solid green;
+  background-color: #c8efcb;       /* Light green background */
+  border-radius: 20px;             /* Pill shape */
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.15); /* Soft green glow */
+}
+/* Social links section */
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.social-links a {
+  color: var(--brand-gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Map styling (responsive and rounded to match cards) */
+iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  border: 0;
+  margin-top: 15px;
+}
 
 /* small screen responsiveness */
 @media (max-width:900px){
@@ -279,4 +419,223 @@ body{
   .hero .hero-img{ height:200px; }
   .nav{ display:none; } /* simple collapse for mobile - for assignment this is fine */
   .container{ justify-content:space-between; }
+}
+/* Form styling */
+/* Layout form vertically with space between elements */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Label design for clarity */
+label {
+  font-weight: bold;
+}
+
+/* Text input fields: name, phone, email */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+/* Green outline when input is focused */
+input:focus {
+  border-color: green;
+  outline: none;
+}
+
+/* The checklist styling */
+
+/* Add spacing before course options */
+.courses {
+  margin-top: 15px;
+}
+
+/* Each course item inside a white box with rounded edges */
+.courses label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+}
+
+/*The calculate button and the apply button style*/
+/* General button appearance */
+button {
+  background-color: #7fff00; /* Bright green (same as Enquiry page) */
+  color: black;
+  font-weight: 600;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover turns button blue */
+button:hover {
+  background-color: #00a2ff;
+  color: #fff;
+}
+
+/* Center and space around main buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Display area for total calculation result */
+.total {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: green;
+}
+
+/*apply button(style)*/
+/* Center Apply Now button below form */
+.apply-btn {
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* Make link look like a button */
+.apply-btn a {
+  background-color: #7fff00; /* Green button */
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+/* Blue hover for interactive look */
+.apply-btn a:hover {
+  background-color: #00a2ff;
+  color: white;
+}
+
+/* Thank you page styling */
+
+/* Centered layout for thank you page */
+.thankyou-body {
+  font-family: Arial, sans-serif;
+  background-color: #c8efcb; /* Matches green box background */
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Main thank you message box */
+.message-box {
+  background-color: white;
+  border: 3px solid green;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+}
+
+/* Message heading */
+.message-box h1 {
+  color: green;
+  margin-bottom: 15px;
+}
+
+/* Paragraph text */
+.message-box p {
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Round return button */
+.return-btn {
+  margin-top: 20px;
+  background-color: #7fff00;
+  color: black;
+  border: none;
+  padding: 15px;
+  border-radius: 50%; /* Circular button */
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover turns button blue */
+.return-btn:hover {
+  background-color: #00a2ff;
+  color: white;
+}
+
+/* Form elements are easy to read and to tap on mobile.*/
+/*This makes consistent sizing, padding, and a friendly appearance.*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea { /*W3Schools, 2025.*/
+  padding: 12px;
+  border-radius: 8px;
+  border: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  width: 100%;
+  margin-bottom: 13px;
+}
+
+/*The light box-shadow keeps the look subtle but accessible.*/
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13,71,161, 0.12); /*Soft blue focus ring*/
+}
+
+/*Buttons used in forms adopt the CTA(call to action) styling for consistency.*/
+/*The btn--accent style from above is reused for submit actions.*/
+button[type="submit"] {
+  background: var(--pill-green);/*W3Schools, 2025.*/
+  color: var(--dark);
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+/*Hover state for submit button to indicate interactivity.*/
+button[type="submit"]:hover {
+  background-color: var(--sky-blue);/*W3Schools, 2025.*/
+  transform: translateY(-2px);/*W3Schools, 2025.*/
+}
+.content form {
+  border: 3px solid green;        /* Green border */
+  background-color: #c8efcb;      /* Light green background */
+  border-radius: 20px;            /* Pill shape */
+  padding: 25px;                  /* Space inside */
+  margin-top: 20px;               /* Small gap from text above */
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.15); /* Soft green glow */
 }
